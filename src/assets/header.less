@@ -1,0 +1,76 @@
+.header {
+  .header_logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 1em;
+  }
+  .header_switch {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 4em;
+    margin-left: 24px;
+  }
+}
+.flex-grow {
+  flex-grow: 1;
+}
+.el-menu--horizontal .el-menu-item:not(.is-disabled):focus,
+.el-menu--horizontal .el-menu-item:not(.is-disabled):hover {
+  background-color: #ffffff;
+}
+.el-menu--horizontal > .el-menu-item.is-active {
+  border-bottom: none;
+  width: auto;
+  height: 3em;
+  margin-top: 0.5em;
+  background-color: antiquewhite !important;
+  border-radius: 15px;
+}
+.el-menu--horizontal > .el-menu-item {
+  width: auto;
+  height: 3em;
+  margin-right: 3em;
+  margin-top: 0.5em;
+  border-bottom: none;
+  border-radius: 15px;
+}
+.el-menu {
+  height: 4em;
+  position: fixed;
+  width: 100%;
+  z-index: 110;
+}
+// 弹出框
+.el-menu--popup {
+  width: 5em;
+}
+.header_layer {
+  display: flex;
+}
+// 移动端icon
+.mobile_icon {
+  width: 4rem;
+  height: 100%;
+  background-color: aquamarine;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// 导航栏随页面显示隐藏
+.show {
+  position: fixed;
+  top: 0px;
+  transition: 0.3s linear;
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.08);
+}
+.hide {
+  position: fixed;
+  top: -65px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.08);
+  transition: 0.3s linear;
+}

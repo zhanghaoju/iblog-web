@@ -33,6 +33,13 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["src/mock/**/*", "src/**/*", "config/**/*", "typings.d.ts"],
+  "include": [
+    "src/mock/**/*",
+    "src/**/*",
+    "config/**/*",
+    "typings.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
   "exclude": ["node_modules", "dist"]
 }

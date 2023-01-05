@@ -1,0 +1,33 @@
+.ib_user {
+  width: 100%;
+  height: 16rem;
+  margin-top: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  background-color: antiquewhite;
+  .ib_user_avatar {
+    display: flex;
+    justify-content: center;
+  }
+  .ib_user_title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    :nth-child(1) {
+      font-size: 1.57em;
+      font-weight: 500;
+    }
+  }
+  .ib_user_aggregate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .agg {
+      margin: 15px;
+    }
+    .agg span {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

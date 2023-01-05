@@ -2,8 +2,8 @@
   <div>
     <el-container>
       <el-aside>
-        <el-card class="backlinks">
-          <div className="backlinks_logo">
+        <el-card class="social">
+          <div className="social_logo">
             <span className="logo"> 语雀 /> </span>
             <span className="logo"> GitHub /> </span>
             <span className="logo"> 其他 /> </span>

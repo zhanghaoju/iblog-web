@@ -2,7 +2,7 @@
   <div>
     <Header />
     <div class="home">
-      <div class="home_image">图片</div>
+      <!-- <div class="home_image">图片</div> -->
       <div v-if="isPc" class="home_content">
         <el-container>
           <el-main>

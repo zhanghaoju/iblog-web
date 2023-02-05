@@ -93,6 +93,7 @@ const handleScroll = () => {
   let scrollHeight = document.documentElement.scrollHeight; //滚动内容高度
   // console.log("scrollTop", scrollTop, 'lastScrollY', lastScrollTop, 'clientHeight', clientHeight, 'scrollHeight', scrollHeight);
   if (scrollTop > lastScrollTop) {
+    // isShow.value = false;
     isShow.value = false;
   } else {
     isShow.value = false;

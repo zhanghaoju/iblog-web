@@ -1,11 +1,10 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory, createWebHistory, type RouteRecordRaw } from "vue-router";
 import { CoffeeCup } from "@element-plus/icons-vue";
+import { RouterEnum } from "@/enums/router-enums";
 const Home = () => import("../views/Home/index.vue");
 const TimeLine = () => import("../views/TimeLine/index.vue");
 const Categories = () => import("../views/Categories/index.vue");
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
+const routes:Array<RouteRecordRaw> = [
     {
       path: "/",
       redirect: {
@@ -13,7 +12,7 @@ const router = createRouter({
       },
     },
     {
-      path: "/home",
+      path: RouterEnum.Home,
       name: "home",
       component: Home,
       meta: {
@@ -39,7 +38,7 @@ const router = createRouter({
       },
       children: [
         {
-          path: "/categories",
+          path: RouterEnum.Categories,
           name: "categories",
           component: Categories,
           meta: {
@@ -48,7 +47,7 @@ const router = createRouter({
           },
         },
         {
-          path: "/timeline",
+          path: RouterEnum.TimeLine,
           name: "timeline",
           component: TimeLine,
           meta: {
@@ -57,7 +56,7 @@ const router = createRouter({
           },
         },
         {
-          path: "/tags",
+          path: RouterEnum.Tags,
           name: "tags",
           component: Home,
           meta: {
@@ -67,9 +66,8 @@ const router = createRouter({
         },
       ],
     },
-
     {
-      path: "/message",
+      path: RouterEnum.Message,
       name: "message",
       component: Home,
       meta: {
@@ -85,8 +83,11 @@ const router = createRouter({
         title: "关于",
         icon: CoffeeCup,
       },
-    },
-  ],
-});
+    }
+  ];
+const router=createRouter({
+  history: import.meta.env.MODE === 'hash' ? createWebHashHistory() : createWebHistory(import.meta.env.BASE_URL as string),
+  routes
+})
 
 export default router;

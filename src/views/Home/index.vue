@@ -229,7 +229,7 @@ onUnmounted(() => {
 
 const handleScroll = () => {
   let scrollTop = document.documentElement.scrollTop; //滚动条滚动高度
-  console.log("滚动内容高度：", scrollTop);
+  // console.log("滚动内容高度：", scrollTop);
   // console.log("scrollTop", scrollTop, 'lastScrollY', lastScrollTop, 'clientHeight', clientHeight, 'scrollHeight', scrollHeight);
   if (scrollTop > 100) {
     console.log("scrollTop>100", scrollTop);
